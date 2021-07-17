@@ -9,5 +9,19 @@ export default {
             method: 'post',
             data: params,
         })
+    },
+    noticeCount() {
+        return request({
+            url: '/leave/count',
+            method: 'get',
+            data: {},
+        })
+    },
+    menuList() {
+        return request({
+            url: '/menu/list',
+            method: 'get',
+            data: {},
+        })
     }
 }
