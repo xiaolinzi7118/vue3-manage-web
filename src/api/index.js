@@ -23,5 +23,40 @@ export default {
             method: 'get',
             data: {},
         })
+    },
+    userList(params) {
+        return request({
+            url: '/users/list',
+            method: 'get',
+            data: params,
+        })
+    },
+    userDelete(params) {
+        return request({
+            url: '/users/delete',
+            method: 'post',
+            data: params,
+        })
+    },
+    roleList() {
+        return request({
+            url: '/roles/allList',
+            method: 'get',
+            data: {},
+        })
+    },
+    deptList() {
+        return request({
+            url: '/dept/list',
+            method: 'get',
+            data: {},
+        })
+    },
+    userSubmit(params) {
+        return request({
+            url: '/users/operate',
+            method: 'post',
+            data: params,
+        })
     }
 }
