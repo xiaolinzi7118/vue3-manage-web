@@ -233,10 +233,12 @@ export default {
       {
         label: "注册时间",
         prop: "createTime",
+        width: 180,
       },
       {
         label: "最后登录时间",
         prop: "lastLoginTime",
+        width: 180,
       },
     ]);
     // 获取用户列表

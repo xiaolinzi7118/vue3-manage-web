@@ -8,6 +8,7 @@ export default {
             url: '/users/login',
             method: 'post',
             data: params,
+            mock: false
         })
     },
     noticeCount() {
@@ -15,6 +16,7 @@ export default {
             url: '/leave/count',
             method: 'get',
             data: {},
+            mock: true
         })
     },
     menuList() {
@@ -22,6 +24,7 @@ export default {
             url: '/menu/list',
             method: 'get',
             data: {},
+            mock: true
         })
     },
     userList(params) {
@@ -29,6 +32,7 @@ export default {
             url: '/users/list',
             method: 'get',
             data: params,
+            mock: false
         })
     },
     userDelete(params) {
@@ -36,6 +40,7 @@ export default {
             url: '/users/delete',
             method: 'post',
             data: params,
+            mock: true
         })
     },
     roleList() {
@@ -43,6 +48,7 @@ export default {
             url: '/roles/allList',
             method: 'get',
             data: {},
+            mock: true
         })
     },
     deptList() {
@@ -50,6 +56,7 @@ export default {
             url: '/dept/list',
             method: 'get',
             data: {},
+            mock: true
         })
     },
     userSubmit(params) {
@@ -57,6 +64,7 @@ export default {
             url: '/users/operate',
             method: 'post',
             data: params,
+            mock: true
         })
     }
 }
