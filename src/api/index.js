@@ -32,7 +32,6 @@ export default {
             url: '/users/list',
             method: 'get',
             data: params,
-            mock: false
         })
     },
     userDelete(params) {
