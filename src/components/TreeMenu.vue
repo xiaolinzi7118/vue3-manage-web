@@ -1,6 +1,6 @@
 <template>
   <template v-for="menu in userMenu">
-    <el-submenu
+    <el-sub-menu
       v-if="
         menu.children &&
         menu.children.length > 0 &&
@@ -14,7 +14,7 @@
         <span>{{ menu.menuName }}</span>
       </template>
       <tree-menu :userMenu="menu.children" />
-    </el-submenu>
+    </el-sub-menu>
     <el-menu-item
       v-else-if="menu.menuType === '1'"
       :index="menu.path"
