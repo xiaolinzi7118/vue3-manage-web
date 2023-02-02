@@ -33,7 +33,7 @@
         <el-button type="danger" @click="userDelPatch">批量删除</el-button>
       </div>
       <el-table :data="userList" @selection-change="handleSelectionChange">
-        <el-table-column type="selection" width="55" />
+        <el-table-column :selectable="toggleSelect" type="selection" width="55" />
         <el-table-column
           v-for="column in columns"
           :prop="column.prop"
@@ -45,10 +45,10 @@
         </el-table-column>
         <el-table-column label="操作" width="150">
           <template #default="scope">
-            <el-button size="mini" @click="handleEdit(scope.row)"
+            <el-button size="small" @click="handleEdit(scope.row)"
               >编辑</el-button
             >
-            <el-button type="danger" size="mini" @click="userDel(scope.row)"
+            <el-button v-if="scope.row.state !== 2" type="danger" size="small" @click="userDel(scope.row)"
               >删除</el-button
             >
           </template>
@@ -121,6 +121,7 @@
             :options="deptList"
             :props="{ checkStrictly: true, value: '_id', label: 'deptName' }"
             clearable
+            style="width: 100%"
           ></el-cascader>
         </el-form-item>
       </el-form>
@@ -134,7 +135,7 @@
   </div>
 </template>
 <script>
-import { getCurrentInstance, onMounted, reactive, ref, toRaw } from "vue";
+import { getCurrentInstance, onMounted, reactive, ref} from "vue";
 import utils from "../utils/utils";
 export default {
   name: "User",
@@ -183,7 +184,7 @@ export default {
       ],
       mobile: [
         {
-          pattern: /1{3-9}\d{9}/,
+          pattern: /1[3-9]\d{9}/,
           message: "请输入正确的手机号格式",
           trigger: "blur",
         },
@@ -302,7 +303,7 @@ export default {
         proxy.$message.success("删除成功");
         getUserList();
       } else {
-        proxy.$message.success("修改失败");
+        proxy.$message.error("修改失败");
       }
     };
     // 用户新增
@@ -329,7 +330,7 @@ export default {
     const handleSubmit = () => {
       proxy.$refs.dialogForm.validate(async (valid) => {
         if (valid) {
-          let params = toRaw(userForm);
+          let params = {...userForm};
           params.userEmail += "@imooc.com";
           params.action = action.value;
           let res = await proxy.$api.userSubmit(params);
@@ -339,7 +340,7 @@ export default {
             handleReset("dialogForm");
             getUserList();
           } else {
-            proxy.$message.fail("用户创建失败");
+            proxy.$message.error("用户创建失败");
           }
         }
       });
@@ -352,6 +353,11 @@ export default {
         Object.assign(userForm, row);
       });
     };
+
+    // 离职状态的不能勾选删除
+    const toggleSelect = (row) => {
+      return row.state !== 2
+    }
     return {
       user,
       userList,
@@ -377,6 +383,7 @@ export default {
       handleClose,
       handleSubmit,
       handleEdit,
+      toggleSelect
     };
   },
 };

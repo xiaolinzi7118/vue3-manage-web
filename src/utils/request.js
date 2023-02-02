@@ -46,14 +46,18 @@ service.interceptors.response.use((res) => {
  */
 function request(options) {
     options.method = options.method || 'get'
+    // `data` 是作为请求体被发送的数据 仅适用 'PUT', 'POST', 'DELETE 和 'PATCH' 请求方法
+    // get请求 写data参数时也会转成params里 拼接到url上
     if (options.method.toLowerCase() === 'get') {
         options.params = options.data;
     }
     let isMock = config.mock;
     if (typeof options.mock != 'undefined') {
+        // 具体请求的mock开关 > config配置的全局开关
         isMock = options.mock;
     }
     if (config.env === 'prod') {
+        // 防止生产环境切换到mock api
         service.defaults.baseURL = config.baseApi
     } else {
         service.defaults.baseURL = isMock ? config.mockApi : config.baseApi
@@ -62,6 +66,7 @@ function request(options) {
     return service(options)
 }
 
+// 请求可以简便成 this.$request.get('/login', {name: 'jack'}, {mock: true, loading: true}).then((res)=> {})
 ['get', 'post', 'put', 'delete', 'patch'].forEach((item) => {
     request[item] = (url, data, options) => {
         return request({

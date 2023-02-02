@@ -1,21 +1,27 @@
 <template>
   <div class="login-wrapper">
     <div class="modal">
-      <el-form ref="userForm" :model="user" status-icon :rules="rules">
+      <el-form ref="userForm" :model="user" size="default" status-icon :rules="rules">
         <div class="title">火星</div>
         <el-form-item prop="userName">
           <el-input
             type="text"
-            prefix-icon="el-icon-user"
             v-model="user.userName"
-          />
+          >
+            <template #prefix>
+              <el-icon class="el-input__icon"><user /></el-icon>
+            </template>
+          </el-input>
         </el-form-item>
         <el-form-item prop="userPwd">
           <el-input
             type="password"
-            prefix-icon="el-icon-view"
             v-model="user.userPwd"
-          />
+          >
+            <template #prefix>
+              <el-icon class="el-input__icon"><lock /></el-icon>
+            </template>
+          </el-input>
         </el-form-item>
         <el-form-item>
           <el-button type="primary" class="btn-login" @click="login"

@@ -22,7 +22,7 @@
       <div class="nav-top">
         <div class="nav-left">
           <div class="menu-fold" @click="toggle">
-            <i class="el-icon-s-fold"></i>
+            <el-icon><Fold /></el-icon>
           </div>
           <div class="bread">
             <bread-crumb />
@@ -34,18 +34,17 @@
             class="notice"
             type="danger"
           >
-            <i class="el-icon-bell"></i>
+            <el-icon><Bell /></el-icon>
           </el-badge>
           <el-dropdown @command="handleLogout">
             <span class="user-link">
               {{ userInfo.userName }}
-              <i class="el-icon--right"></i>
+              <!-- <el-icon><Right /></el-icon> -->
             </span>
             <template #dropdown>
               <el-dropdown-menu>
                 <el-dropdown-item command="email"
-                  >邮箱：{{ userInfo.userEmail }}</el-dropdown-item
-                >
+                  >邮箱：{{ userInfo.userEmail }}</el-dropdown-item>
                 <el-dropdown-item command="logout">退出</el-dropdown-item>
               </el-dropdown-menu>
             </template>
@@ -176,6 +175,9 @@ export default {
         .notice {
           line-height: 30px;
           margin-right: 15px;
+        }
+        .el-dropdown {
+          vertical-align: middle;
         }
         .user-link {
           cursor: pointer;

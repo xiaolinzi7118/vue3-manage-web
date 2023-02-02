@@ -10,7 +10,7 @@
       :index="menu.path"
     >
       <template #title>
-        <i :class="menu.icon"></i>
+        <el-icon><component :is="menu.icon"></component></el-icon>
         <span>{{ menu.menuName }}</span>
       </template>
       <tree-menu :userMenu="menu.children" />
@@ -18,7 +18,6 @@
     <el-menu-item
       v-else-if="menu.menuType === '1'"
       :index="menu.path"
-      :key="menu._id"
       >{{ menu.menuName }}</el-menu-item
     >
   </template>
