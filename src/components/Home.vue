@@ -104,7 +104,7 @@ export default {
     },
     async getMenuList() {
       try {
-        const list = await this.$api.menuList();
+        const list = await this.$api.getMenuList();
         this.userMenu = list;
       } catch (error) {
         console.log(error);
