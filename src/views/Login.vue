@@ -38,8 +38,8 @@ export default {
   data() {
     return {
       user: {
-        userName: "",
-        userPwd: "",
+        userName: "admin",
+        userPwd: "123456",
       },
       rules: {
         userName: [

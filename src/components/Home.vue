@@ -90,8 +90,8 @@ export default {
       if (key === "email") {
         return;
       }
-      this.$store.commit("saveUserInfo", "");
-      this.userInfo = null;
+      this.$store.commit("saveUserInfo", {});
+      this.userInfo = {};
       this.$router.push("/login");
     },
     async getNoticeCount() {

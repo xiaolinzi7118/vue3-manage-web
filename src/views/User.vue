@@ -253,7 +253,7 @@ export default {
     const getUserList = async () => {
       let params = { ...user, ...pager };
       try {
-        const { list, page } = await proxy.$api.userList(params);
+        const { list, page } = await proxy.$api.getUserList(params);
         userList.value = list;
         pager.total = page.total;
       } catch (error) {}
@@ -267,7 +267,7 @@ export default {
     onMounted(() => {
       getUserList();
       getDeptList();
-      getRoleList();
+      getRoleAllList();
     });
     // 分页事件处理
     const handleCurrentChange = (current) => {
@@ -276,7 +276,7 @@ export default {
     };
     //用户删除
     const userDel = async (val) => {
-      await proxy.$api.userDelete({
+      await proxy.$api.userDel({
         userIds: [val.userId],
       });
       proxy.$message.success("删除成功");
@@ -296,7 +296,7 @@ export default {
         proxy.$message.error("请选择要删除的用户");
         return;
       }
-      const res = await proxy.$api.userDelete({
+      const res = await proxy.$api.userDel({
         userIds: checkedUserIds.value, //可单个删除，也可批量删除
       });
       if (res.nModified > 0) {
@@ -312,13 +312,13 @@ export default {
       showModal.value = true;
     };
     //角色名称列表
-    const getRoleList = async () => {
-      let list = await proxy.$api.roleList();
+    const getRoleAllList = async () => {
+      let list = await proxy.$api.getRoleAllList();
       roleList.value = list;
     };
     //部门列表
     const getDeptList = async () => {
-      let list = await proxy.$api.deptList();
+      let list = await proxy.$api.getDeptList();
       deptList.value = list;
     };
     //新增取消
@@ -334,13 +334,14 @@ export default {
           params.userEmail += "@imooc.com";
           params.action = action.value;
           let res = await proxy.$api.userSubmit(params);
+          const tip = action.value === 'add' ? '新增' : '编辑'
           if (res) {
             showModal.value = false;
-            proxy.$message.success("用户创建成功");
+            proxy.$message.success(`用户${tip}成功`);
             handleReset("dialogForm");
             getUserList();
           } else {
-            proxy.$message.error("用户创建失败");
+            proxy.$message.error(`用户${tip}失败`);
           }
         }
       });
@@ -378,7 +379,7 @@ export default {
       userDelPatch,
       handleSelectionChange,
       handleCreate,
-      getRoleList,
+      getRoleAllList,
       getDeptList,
       handleClose,
       handleSubmit,
