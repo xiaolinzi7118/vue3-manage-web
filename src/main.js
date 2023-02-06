@@ -15,7 +15,6 @@ const app = createApp(App);
 app.directive('has', {
     beforeMount: function (el, binding) {
         let actionList = storage.getItem('actionList');
-        console.log(binding)
         // v-has:add="'user-create'" binding.arg为add binding.value为user-create
         let value = binding.value;
         let hasPermission = actionList.includes(value)
