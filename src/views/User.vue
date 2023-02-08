@@ -99,6 +99,12 @@
             <el-option :value="3" label="试用期"></el-option>
           </el-select>
         </el-form-item>
+        <el-form-item label="用户角色" prop="role">
+          <el-radio-group v-model="userForm.role">
+            <el-radio :label="1">普通用户</el-radio>
+            <el-radio :label="0">系统管理员</el-radio>
+          </el-radio-group>
+        </el-form-item>
         <el-form-item label="系统角色" prop="roleList">
           <el-select
             v-model="userForm.roleList"
@@ -160,6 +166,7 @@ export default {
     // 新增用户Form对象
     const userForm = reactive({
       state: 3,
+      role: 1,
     });
     const action = ref("add");
     //角色列表
