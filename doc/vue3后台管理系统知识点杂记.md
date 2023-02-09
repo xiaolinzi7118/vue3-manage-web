@@ -2,29 +2,29 @@
 
 ## 项目规划
 
-![内容](.\images\2.png)
+![内容](./images/2.png)
 
-![image-20210710225931995](.\images\3.png)
+![image-20210710225931995](./images/3.png)
 
-![image-20210710225941747](.\images\4.png)
+![image-20210710225941747](./images/4.png)
 
-![image-20210710230047290](.\images\5.png)
+![image-20210710230047290](./images/5.png)
 
-![image-20210710230142884](.\images\6.png)
+![image-20210710230142884](./images/6.png)
 
-![image-20210710231358055](.\images\7.png)
+![image-20210710231358055](./images/7.png)
 
-![image-20210710231439285](.\images\8.png)
+![image-20210710231439285](./images/8.png)
 
-![image-20210710231613499](.\images\9.png)
+![image-20210710231613499](./images/9.png)
 
-![image-20230130144514685](.\images\10.png)
+![image-20230130144514685](./images/10.png)
 
-![image-20230130144932304](.\images\11.png)
+![image-20230130144932304](./images/11.png)
 
-![image-20210711101054603](.\images\12.png)
+![image-20210711101054603](./images/12.png)
 
-![image-20230208145637286](.\images\13.png)
+![image-20230208145637286](./images/13.png)
 
 
 
@@ -36,29 +36,29 @@
 
 ### 安装依赖
 
-![image-20210711112019775](.\images\14.png)
+![image-20210711112019775](./images/14.png)
 
-![image-20210711113601766](.\images\15.png)
+![image-20210711113601766](./images/15.png)
 
-![image-20210711163318578](.\images\16.png)
+![image-20210711163318578](./images/16.png)
 
 ### 环境变量配置
 
 `const env=import.meta.env.MODE || 'production'`得到当前环境 production 或者dev test
 
-![image-20230131094214747](.\images\17.png)
+![image-20230131094214747](./images/17.png)
 
 可以通过.env.dev文件更改名称
 
-![image-20230131091407413](.\images\18.png)
+![image-20230131091407413](./images/18.png)
 
 ### 路由配置
 
-![image-20230131092324632](.\images\19.png)
+![image-20230131092324632](./images/19.png)
 
-![image-20230131111436525](.\images\20.png)
+![image-20230131111436525](./images/20.png)
 
-![image-20230131093542863](.\images\21.png)
+![image-20230131093542863](./images/21.png)
 
 #### 路由跳转的三种方式
 
@@ -101,7 +101,7 @@ const goHome = ()=>{
 
 vite创建的项目 import必须带上文件后缀才能识别到
 
-![image-20230131093915626](.\images\22.png)
+![image-20230131093915626](./images/22.png)
 
 ### mock配置
 
@@ -111,27 +111,27 @@ vite创建的项目 import必须带上文件后缀才能识别到
 
 用[fastmock](https://www.fastmock.site/)模拟开发时的api，在[mock.js](http://mockjs.com/examples.html)查看示例规范，控制接口返回随机数据
 
-![image-20230131095045878](.\images\23.png)
+![image-20230131095045878](./images/23.png)
 
-![image-20230131100115138](.\images\24.png)
+![image-20230131100115138](./images/24.png)
 
-![image-20230131100217475](.\images\25.png)
+![image-20230131100217475](./images/25.png)
 
 config里控制全局mock开关，可以在具体请求中设置mock开关
 
-![image-20230131095109362](.\images\26.png)
+![image-20230131095109362](./images/26.png)
 
-![image-20230131095133236](.\images\27.png)
+![image-20230131095133236](./images/27.png)
 
-![image-20230201103318607](.\images\28.png)
+![image-20230201103318607](./images/28.png)
 
 ### 请求封装
 
-![image-20230131102625780](.\images\29.png)
+![image-20230131102625780](./images/29.png)
 
-![image-20230131103958670](.\images\30.png)
+![image-20230131103958670](./images/30.png)
 
-![image-20230131104258469](.\images\31.png)
+![image-20230131104258469](./images/31.png)
 
 
 
@@ -139,21 +139,21 @@ config里控制全局mock开关，可以在具体请求中设置mock开关
 
 api统一管理 `app.config.globalProperties.$api = api;`
 
-![image-20230201093828730](.\images\32.png)
+![image-20230201093828730](./images/32.png)
 
 ### storage封装
 
-![image-20230131104614111](.\images\33.png)
+![image-20230131104614111](./images/33.png)
 
 ### Vuex状态管理
 
-![image-20230201094442345](.\images\34.png)
+![image-20230201094442345](./images/34.png)
 
-![image-20230201094457905](.\images\35.png)
+![image-20230201094457905](./images/35.png)
 
-![image-20230201094539923](.\images\36.png)
+![image-20230201094539923](./images/36.png)
 
-![image-20230201094605451](.\images\37.png)
+![image-20230201094605451](./images/37.png)
 
 ### 关于架构师的知识延伸
 
@@ -210,13 +210,13 @@ yarn global add koa-generator
 
 `yarn install  yarn start` 开启服务，默认端口3000
 
-![image-20230131145607725](.\images\38.png)
+![image-20230131145607725](./images/38.png)
 
-![image-20230131150558592](.\images\39.png)
+![image-20230131150558592](./images/39.png)
 
 路由说明：
 
-![image-20230131150630408](.\images\40.png)
+![image-20230131150630408](./images/40.png)
 
 ### 使用log4.js进行日志规范
 
@@ -226,17 +226,17 @@ yarn global add koa-generator
 
 配置log4js
 
-![image-20230131152332367](.\images\41.png)
+![image-20230131152332367](./images/41.png)
 
-![image-20230131152410633](.\images\42.png)
+![image-20230131152410633](./images/42.png)
 
-![image-20230131152515334](.\images\43.png)
+![image-20230131152515334](./images/43.png)
 
 ### MongoDB数据库
 
 [下载](https://www.mongodb.com/try/download/community)
 
-![image-20210714155921035](.\images\44.png)
+![image-20210714155921035](./images/44.png)
 
 命令行输入`mongod --version`如果找不到就需要配置系统环境变量
 
@@ -248,45 +248,45 @@ bin 目录中打开 cmd 窗口输入  `mongod --dbpath=..\data\db`
 
 `mongod.exe --config "C:\Program Files\MongoDB\Server\5.0\bin\mongod.cfg" --install --serviceName "MongoDB"`
 
-![image-20230131163612141](.\images\45.png)
+![image-20230131163612141](./images/45.png)
 
 将MongoDB 添加到系统服务中（服务的删除执行命令：sc delete MongoDB）
 
-![image-20230131163744828](.\images\46.png)
+![image-20230131163744828](./images/46.png)
 
 检查 浏览器输入http://localhost:27017 返回字符串 则表明可以正常访问
 
 ### Mongo基础入门
 
-![image-20210714162032514](.\images\47.png)
+![image-20210714162032514](./images/47.png)
 
-![image-20210714162101949](.\images\48.png)
+![image-20210714162101949](./images/48.png)
 
 下面的db.collection，collection指集合名字
 
-![image-20210714165359085](.\images\49.png)
+![image-20210714165359085](./images/49.png)
 
-![image-20210714165427536](.\images\50.png)
+![image-20210714165427536](./images/50.png)
 
-![image-20210714165646195](.\images\51.png)
+![image-20210714165646195](./images/51.png)
 
 用可视化客户端操作也可以
 
-![image-20230131165730797](.\images\52.png)
+![image-20230131165730797](./images/52.png)
 
 ##### mongoose 连接数据库进行增删改查
 
-![image-20230201100826602](.\images\53.png)
+![image-20230201100826602](./images/53.png)
 
-![image-20230201100850097](.\images\54.png)
+![image-20230201100850097](./images/54.png)
 
-![image-20230201100933179](.\images\55.png)
+![image-20230201100933179](./images/55.png)
 
-![image-20230201100955115](.\images\56.png)
+![image-20230201100955115](./images/56.png)
 
-![image-20230201101729202](.\images\57.png)
+![image-20230201101729202](./images/57.png)
 
-![image-20230201171155253](.\images\58.png)
+![image-20230201171155253](./images/58.png)
 
 ### mongo语法
 
@@ -348,13 +348,13 @@ User.findOne({ userName,userPwd }).select({ userId:1,_id:0 })
 
 ### 接口文档设计
 
-![image-20230131173439591](.\images\59.png)
+![image-20230131173439591](./images/59.png)
 
 ### 工具函数封装
 
-![image-20230131174733368](.\images\60.png)
+![image-20230131174733368](./images/60.png)
 
-![image-20230131174746725](.\images\61.png)
+![image-20230131174746725](./images/61.png)
 
 ### Koa掌握
 
@@ -370,37 +370,37 @@ User.findOne({ userName,userPwd }).select({ userId:1,_id:0 })
 
 ### 用户登录
 
-![image-20230201100629168](.\images\62.png)
+![image-20230201100629168](./images/62.png)
 
 #### 后台开发
 
 routes\users.js
 
-![image-20230201102253655](.\images\63.png)
+![image-20230201102253655](./images/63.png)
 
-![image-20230201102343912](.\images\64.png)
+![image-20230201102343912](./images/64.png)
 
 ### 首页菜单
 
-![image-20230201152912521](.\images\65.png)
+![image-20230201152912521](./images/65.png)
 
 ### 用户管理
 
 #### 查询
 
-![image-20230202105832312](.\images\66.png)
+![image-20230202105832312](./images/66.png)
 
 #### 删除
 
-![image-20230202114320289](.\images\67.png)
+![image-20230202114320289](./images/67.png)
 
-![image-20230202114452944](.\images\68.png)
+![image-20230202114452944](./images/68.png)
 
-![](.\images\69.png)
+![](./images/69.png)
 
 #### 编辑
 
-![image-20230202150818126](.\images\70.png)
+![image-20230202150818126](./images/70.png)
 
 #### 新增
 
@@ -408,7 +408,7 @@ routes\users.js
 
 新建一个counter集合 更新值
 
-![image-20230202154925620](.\images\71.png)
+![image-20230202154925620](./images/71.png)
 
 #### md5
 
@@ -432,9 +432,9 @@ routes\users.js
 
 渲染菜单树形结构
 
-![image-20230203105424356](.\images\72.png)
+![image-20230203105424356](./images/72.png)
 
-![image-20230203105444510](.\images\73.png)
+![image-20230203105444510](./images/73.png)
 
 ### RBAC权限模型
 
@@ -446,19 +446,19 @@ Role-Base-Access-Control
 
 ### 动态路由
 
-![image-20230206114237576](.\images\74.png)
+![image-20230206114237576](./images/74.png)
 
-![image-20230206114302195](.\images\75.png)
+![image-20230206114302195](./images/75.png)
 
 ### 工作流
 
-![image-20230205161741858](.\images\76.png)
+![image-20230205161741858](./images/76.png)
 
 ## 低代码
 
-![image-20230208093645956](.\images\77.png)
+![image-20230208093645956](./images/77.png)
 
-![image-20230208093801677](.\images\78.png)
+![image-20230208093801677](./images/78.png)
 
 
 
@@ -480,21 +480,21 @@ session key做不到单点登录（对多个服务器），jwt token可以
 
 ### 原理
 
-![image-20210717231112068](.\images\79.png)
+![image-20210717231112068](./images/79.png)
 
-![image-20210717231226431](.\images\80.png)
+![image-20210717231226431](./images/80.png)
 
-![image-20210717231305923](.\images\81.png)
+![image-20210717231305923](./images/81.png)
 
-![image-20210717231333845](.\images\82.png)
+![image-20210717231333845](./images/82.png)
 
-![image-20230201160101907](.\images\83.png)
+![image-20230201160101907](./images/83.png)
 
-![image-20230201160114062](.\images\84.png)
+![image-20230201160114062](./images/84.png)
 
-![image-20230201160141589](.\images\85.png)
+![image-20230201160141589](./images/85.png)
 
-![image-20210717231526157](.\images\86.png)
+![image-20210717231526157](./images/86.png)
 
 ### 知识拓展—传统登录做法是如何记住用户身份信息
 
@@ -522,9 +522,9 @@ OAuth本身是一种单点登录协议，当公司体量大了以后，会存在
 
 时间如果是数字类型 单位默认是s，字符串类型 单位默认是ms，也可以直接写'2days' '10h' '7d'
 
-![image-20210718084732503](.\images\87.png)
+![image-20210718084732503](./images/87.png)
 
-![image-20230201162220939](.\images\88.png)
+![image-20230201162220939](./images/88.png)
 
 ### 步骤
 
@@ -532,11 +532,11 @@ OAuth本身是一种单点登录协议，当公司体量大了以后，会存在
 
 login登录后服务器响应数据里加上token返回给客户端
 
-![image-20230201162829072](.\images\89.png)
+![image-20230201162829072](./images/89.png)
 
 客户端之后的请求，请求拦截里设置，拿到获取的token，带着请求一起发送
 
-![image-20230201163556735](.\images\90.png)
+![image-20230201163556735](./images/90.png)
 
 测试 服务器某个请求验证token
 
@@ -551,11 +551,11 @@ router.get('/leave/count', (ctx) => {
 })
 ```
 
-![image-20230201164232969](.\images\91.png)
+![image-20230201164232969](./images/91.png)
 
 ### 续签思路
 
-![image-20230201165203870](.\images\92.png)
+![image-20230201165203870](./images/92.png)
 
 ### 中间件
 
@@ -587,25 +587,25 @@ app.use(async (ctx, next) => {
 
 ### res._doc
 
-![image-20230203103500897](.\images\93.png)
+![image-20230203103500897](./images/93.png)
 
 ## Vue3知识点
 
 vue3不推荐挂载全局，因为Vue3没有this对象，但是提供了其它挂载方式
 
-![image-20230201110242496](.\images\94.png)
+![image-20230201110242496](./images/94.png)
 
-![image-20230201110532874](.\images\95.png)
+![image-20230201110532874](./images/95.png)
 
 在vite.config.js里配置
 
-![image-20230201153019437](.\images\96.png)
+![image-20230201153019437](./images/96.png)
 
 ### setup两种语法
 
-![image-20230201110344690](.\images\97.png)
+![image-20230201110344690](./images/97.png)
 
-![image-20230201110410182](.\images\98.png)
+![image-20230201110410182](./images/98.png)
 
 ### element-plus
 
@@ -615,9 +615,9 @@ vue3不推荐挂载全局，因为Vue3没有this对象，但是提供了其它�
 
 Element Plus 为 `app.config.globalProperties` 添加了全局方法 `$message`，因此在 vue 实例中可以使用当前页面中的调用方式调用 `Message`
 
-![image-20230201220250097](.\images\99.png)
+![image-20230201220250097](./images/99.png)
 
-![image-20230201220311923](.\images\100.png)
+![image-20230201220311923](./images/100.png)
 
 ### ref 和 reactive
 
@@ -650,21 +650,21 @@ let leaveForm = reactive({})
 
 ### 全局对象
 
-![image-20230202154723854](.\images\101.png)
+![image-20230202154723854](./images/101.png)
 
-![image-20230202154737042](.\images\102.png)
+![image-20230202154737042](./images/102.png)
 
 ### 全局指令
 
-![image-20230205222738265](.\images\103.png)
+![image-20230205222738265](./images/103.png)
 
 ### v-model
 
-![image-20230208100222552](.\images\104.png)
+![image-20230208100222552](./images/104.png)
 
-![image-20230208100341352](.\images\105.png)
+![image-20230208100341352](./images/105.png)
 
-![image-20230208100404909](.\images\106.png)
+![image-20230208100404909](./images/106.png)
 
 ## 待完善点
 
