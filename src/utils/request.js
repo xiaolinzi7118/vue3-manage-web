@@ -29,7 +29,7 @@ service.interceptors.response.use((res) => {
     const { code, data, msg } = res.data;
     if (code === 200) {
         return data;
-    } else if (code === 50001) {
+    } else if (code === 500001) {
         ElMessage.error(TOKEN_INVALID)
         setTimeout(() => {
             router.push('/login')
@@ -56,7 +56,7 @@ function request(options) {
         // 具体请求的mock开关 > config配置的全局开关
         isMock = options.mock;
     }
-    if (config.env === 'prod') {
+    if (config.env === 'production') {
         // 防止生产环境切换到mock api
         service.defaults.baseURL = config.baseApi
     } else {
