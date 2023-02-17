@@ -8,143 +8,126 @@ export default {
             url: '/users/login',
             method: 'post',
             data: params,
-            mock: false
+            // mock: false
         })
     },
     noticeCount(params) {
         return request({
             url: '/leave/count',
             method: 'get',
-            data: {},
-            mock: false
+            data: {}
         })
     },
     getMenuList(params) {
         return request({
             url: '/menu/list',
             method: 'get',
-            data: params,
-            mock: false
+            data: params
         })
     },
     getPermissionList() {
         return request({
             url: '/users/getPermissionList',
             method: 'get',
-            data: {},
-            mock: false
+            data: {}
         })
     },
     getUserList(params) {
         return request({
             url: '/users/list',
             method: 'get',
-            data: params,
-            mock: false
+            data: params
         })
     },
     getAllUserList() {
         return request({
             url: '/users/all/list',
             method: 'get',
-            data: {},
-            mock: false
+            data: {}
         })
     },
     userDel(params) {
         return request({
             url: '/users/delete',
             method: 'post',
-            data: params,
-            mock: false
+            data: params
         })
     },
     getRoleAllList() {
         return request({
             url: '/roles/allList',
             method: 'get',
-            data: {},
-            mock: false
+            data: {}
         })
     },
     getRoleList(params) {
         return request({
             url: '/roles/list',
             method: 'get',
-            data: params,
-            mock: false
+            data: params
         })
     },
     getDeptList() {
         return request({
             url: '/dept/list',
             method: 'get',
-            data: {},
-            mock: false
+            data: {}
         })
     },
     deptOperate(params) {
         return request({
             url: '/dept/operate',
             method: 'post',
-            data: params,
-            mock: false
+            data: params
         })
     },
     userSubmit(params) {
         return request({
             url: '/users/operate',
             method: 'post',
-            data: params,
-            mock: false
+            data: params
         })
     },
     menuSubmit(params) {
         return request({
             url: '/menu/operate',
             method: 'post',
-            data: params,
-            mock: false
+            data: params
         })
     },
     roleOperate(params) {
         return request({
             url: '/roles/operate',
             method: 'post',
-            data: params,
-            mock: false
+            data: params
         })
     },
     updatePermission(params) {
         return request({
             url: '/roles/update/permission',
             method: 'post',
-            data: params,
-            mock: false
+            data: params
         })
     },
     getApplyList(params) {
         return request({
             url: '/leave/list',
             method: 'get',
-            data: params,
-            mock: false
+            data: params
         })
     },
     leaveOperate(params) {
         return request({
             url: '/leave/operate',
             method: 'post',
-            data: params,
-            mock: false
+            data: params
         })
     },
     leaveApprove(params) {
         return request({
             url: '/leave/approve',
             method: 'post',
-            data: params,
-            mock: false
+            data: params
         })
     }
 }
