@@ -31,10 +31,17 @@
       </el-form>
     </div>
   </div>
+  <Badge />
+
 </template>
 <script>
+import Badge from '../components/Badge.vue'
+
 export default {
   name: "login",
+  components: {
+    Badge
+  },
   data() {
     return {
       user: {
