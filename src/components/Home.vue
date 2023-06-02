@@ -56,6 +56,7 @@
         <div class="main-page">
           <router-view></router-view>
         </div>
+        <Badge />
       </div>
     </div>
   </div>
@@ -64,11 +65,13 @@
 <script>
 import TreeMenu from "./TreeMenu.vue";
 import BreadCrumb from "./BreadCrumb.vue";
+import Badge from "./Badge.vue";
 export default {
   name: "Home",
   components: {
     TreeMenu,
     BreadCrumb,
+    Badge
   },
   data() {
     return {
