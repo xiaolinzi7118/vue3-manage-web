@@ -10,12 +10,14 @@
     "@element-plus/icons-vue": "^2.0.10",
     "axios": "^0.21.1",
     "element-plus": "^2.2.6",
+    "unocss": "^0.57.7",
     "vite": "^2.9.12",
     "vue": "^3.2.37",
     "vue-router": "^4.0.16",
     "vuex": "^4.0.2"
   },
   "devDependencies": {
+    "@unocss/preset-uno": "^0.57.7",
     "@vitejs/plugin-vue": "^2.3.3",
     "@vue/compiler-sfc": "^3.0.5",
     "sass": "^1.32.8"

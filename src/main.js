@@ -8,6 +8,7 @@ import storage from './utils/storage'
 import api from './api'
 import store from './store'
 import * as ElementPlusIconsVue from '@element-plus/icons-vue'
+import 'virtual:uno.css'
 
 const app = createApp(App);
 

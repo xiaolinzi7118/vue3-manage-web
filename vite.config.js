@@ -1,13 +1,22 @@
-import { defineConfig } from 'vite'
-import vue from '@vitejs/plugin-vue'
-const path = require('path')
+import { defineConfig } from "vite";
+import vue from "@vitejs/plugin-vue";
+import Unocss from 'unocss/vite';
+import { presetIcons, presetUno } from "unocss";
+
+const path = require("path");
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  plugins: [
+    vue(),
+    Unocss({
+      presets: [presetUno(), presetIcons()],
+    }),
+  ],
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, './src')
-    }
+      "@": path.resolve(__dirname, "./src"),
+    },
   },
   // css: {
   //   preprocessorOptions: {
@@ -17,13 +26,12 @@ export default defineConfig({
   //   }
   // },
   server: {
-    host: 'localhost',
+    host: "localhost",
     port: 8080,
     proxy: {
       "/api": {
-        target: "http://localhost:3000"
-      }
-    }
+        target: "http://localhost:3000",
+      },
+    },
   },
-  plugins: [vue()]
-})
+});
